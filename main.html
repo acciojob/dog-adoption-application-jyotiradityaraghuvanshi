@@ -9,16 +9,37 @@
 <body>
 	<!-- the entire body must be written by student -->
 
-	<form action="/submit">
-		<label>Name:</label>
-		<input type="text" name="Name" id="name" placeholder="Name"><br>
-		<label>Phone Number:</label>
-		<input type="text" name="Phone Number" id="phone" placeholder="Phone Number"><br>
-		<label>Address:</label>
-		<input type="text" name="Address" id="address" placeholder="Address"><br>
-		<label>Have you ever lived with a Dog before?</label>
-		<input type="checkbox" id="checkbox" ><br>
-		<div class="form-group">
+	<div class="form-container">
+    <h1>Dog Adoption Form</h1>
+    <form action="/submit" method="post">
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+      </div>
+
+      <!-- Phone Number Field -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+      </div>
+
+      <!-- Address Field -->
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Address" required>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="hasLivedWithDog" name="hasLivedWithDog" value="Have you ever lived with a Dog before?">
+          Have you ever lived with a Dog before?
+        </label>
+      </div>
+
+      <!-- Multi-Select -->
+      <div class="form-group">
         <label for="preferredBreeds">Please select your preferred breeds</label>
         <select id="preferredBreeds" name="preferredBreeds[]" multiple required>
           <option value="labrador">Labrador</option>
@@ -29,10 +50,14 @@
         </select>
       </div>
 
-
-		<br>
-		<button type="submit" id="submit">Submit</button>
-	</form>
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+	
+    
 
 
 
